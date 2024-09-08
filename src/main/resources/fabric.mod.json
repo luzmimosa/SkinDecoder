@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "skindecoder",
+  "version": "${version}",
+  "name": "SkinDecoder",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/skindecoder/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.fadedbytes.skindecoder.client.SkinDecoderClient"
+    ],
+    "main": [
+      "com.fadedbytes.skindecoder.SkinDecoder"
+    ]
+  },
+  "mixins": [
+    "skindecoder.mixins.json",
+    {
+      "config": "skindecoder.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
